@@ -22,7 +22,7 @@
             "main": "projects/vaccum/src/main.ts",
             "polyfills": "projects/vaccum/src/polyfills.ts",
             "tsConfig": "projects/vaccum/tsconfig.app.json",
-            "aot": false,
+            "aot": true,
             "assets": [
               "projects/vaccum/src/favicon.ico",
               "projects/vaccum/src/assets",
@@ -43,8 +43,6 @@
               ],
               "optimization": true,
               "outputHashing": "all",
-              "sourceMap": false,
-              "extractCss": true,
               "namedChunks": false,
               "aot": true,
               "extractLicenses": true,
@@ -55,6 +53,10 @@
                   "type": "initial",
                   "maximumWarning": "2mb",
                   "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb"
                 }
               ],
               "serviceWorker": true,
