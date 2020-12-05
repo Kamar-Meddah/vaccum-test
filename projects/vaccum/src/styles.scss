@@ -28,5 +28,22 @@ $dark-theme: mat-dark-theme($dark-primary,$dark-accent,$dark-warn);
 }
 /* You can add global styles to this file, and also import other style files */
 
+* {
+  transition: all .05s ease-in-out;
+  scrollbar-width: thin;
+  ::-webkit-scrollbar {
+    width: 6px !important;
+  }
+  ::-webkit-scrollbar-thumb {
+    background-color: #cdcdcd;
+  }
+}
+
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body {
+  margin: 0;
+  font-family: Roboto,  "Helvetica Neue", sans-serif;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

@@ -25,7 +25,8 @@
             "aot": false,
             "assets": [
               "projects/vaccum/src/favicon.ico",
-              "projects/vaccum/src/assets"
+              "projects/vaccum/src/assets",
+              "projects/vaccum/src/manifest.webmanifest"
             ],
             "styles": [
               "projects/vaccum/src/styles.scss"
@@ -55,7 +56,9 @@
                   "maximumWarning": "2mb",
                   "maximumError": "5mb"
                 }
-              ]
+              ],
+              "serviceWorker": true,
+              "ngswConfigPath": "projects/vaccum/ngsw-config.json"
             }
           }
         },
