@@ -1,13 +1,50 @@
-<div fxLayout="column">
-    <h1>Bienvenu</h1>
-    <h2>Veillez choisir</h2>
-    <div fxLayout="column">
-        <div fxLayout="row" fxLayoutGap="1rem">
-            <input type="number">
-            <input type="number">
-        </div>
-        <div>
-            <input type="text">
-        </div>
-    </div>
+<div fxLayout="column" fxLayoutAlign="center center">
+    <h1>Veuillez remplir les options ci-dessus</h1>
+    <form fxLayout="column" [formGroup]="formData" (ngSubmit)="onSubmit()">
+        <mat-form-field color="primary"
+                        appearance="outline">
+            <mat-label>Taille du grille (y,x)</mat-label>
+            <input formControlName="size"
+                   placeholder="5,6"
+                   matInput
+                   required>
+            <mat-error *ngIf="formData.get('size').hasError('pattern')">
+                Valeur incorrect, doit etre de la forme suivante y,x
+            </mat-error>
+        </mat-form-field>
+        <mat-form-field color="primary"
+                        appearance="outline">
+            <mat-label>Position initial (y,x)</mat-label>
+            <input formControlName="position"
+                   placeholder="1,1"
+                   matInput
+                   required>
+            <mat-error *ngIf="formData.get('position').hasError('pattern')">
+                Valeur incorrect, doit etre de la forme suivante y,x
+            </mat-error>
+        </mat-form-field>
+        <mat-form-field appearance="outline"
+                        color="primary">
+            <mat-label>Status</mat-label>
+            <mat-select formControlName="status">
+                <mat-option value="E">East</mat-option>
+                <mat-option value="W">Ouest</mat-option>
+                <mat-option value="S">Sud</mat-option>
+                <mat-option value="N">Nord</mat-option>
+            </mat-select>
+        </mat-form-field>
+        <mat-form-field color="primary"
+                        appearance="outline">
+            <mat-label>Series de commandes</mat-label>
+            <input formControlName="commands"
+                   placeholder="ADG"
+                   (input)="cleanInputCommands($event)"
+                   matInput
+                   required>
+            <mat-error *ngIf="formData.get('commands').hasError('pattern')">
+                Valeur incorrect, seule les commandes suivantes sont accepter A,D,et G
+            </mat-error>
+        </mat-form-field>
+        <button mat-raised-button color="primary">Générer</button>
+    </form>
 </div>

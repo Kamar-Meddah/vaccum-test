@@ -13,6 +13,10 @@ import {environment} from '../environments/environment';
 import {FlexLayoutModule} from "@angular/flex-layout";
 import {ReactiveFormsModule} from "@angular/forms";
 import {MatGridListModule} from "@angular/material/grid-list";
+import {MatFormFieldModule} from "@angular/material/form-field";
+import {MatOptionModule} from "@angular/material/core";
+import {MatSelectModule} from "@angular/material/select";
+import {MatInputModule} from "@angular/material/input";
 
 @NgModule({
     declarations: [
@@ -29,7 +33,10 @@ import {MatGridListModule} from "@angular/material/grid-list";
         MatButtonModule,
         ServiceWorkerModule.register('ngsw-worker.js', {enabled: environment.production}),
         ReactiveFormsModule,
-        MatGridListModule
+        MatFormFieldModule,
+        MatOptionModule,
+        MatSelectModule,
+        MatInputModule
     ],
     providers: [],
     bootstrap: [AppComponent],
