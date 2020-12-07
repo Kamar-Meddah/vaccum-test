@@ -12,11 +12,11 @@ import {ServiceWorkerModule} from '@angular/service-worker';
 import {environment} from '../environments/environment';
 import {FlexLayoutModule} from "@angular/flex-layout";
 import {ReactiveFormsModule} from "@angular/forms";
-import {MatGridListModule} from "@angular/material/grid-list";
 import {MatFormFieldModule} from "@angular/material/form-field";
 import {MatOptionModule} from "@angular/material/core";
 import {MatSelectModule} from "@angular/material/select";
 import {MatInputModule} from "@angular/material/input";
+import {CommonModule} from "@angular/common";
 
 @NgModule({
     declarations: [
@@ -36,7 +36,8 @@ import {MatInputModule} from "@angular/material/input";
         MatFormFieldModule,
         MatOptionModule,
         MatSelectModule,
-        MatInputModule
+        MatInputModule,
+        CommonModule
     ],
     providers: [],
     bootstrap: [AppComponent],

@@ -4,7 +4,10 @@
          *ngFor="let y of Array(this.size.ySize).fill(0);let j=index">
         <div fxLayout="column" style="width: 50px;margin: 1px"
              *ngFor="let x of Array(this.size.xSize).fill(0);let i=index">
-            <app-square style="width: 100%;height: 100%"></app-square>
+            <app-square style="width: 100%;height: 100%"
+                        [current]="j==currentPosition.yCoordinate&&i==currentPosition.xCoordinate"
+                        [status]="(j==currentPosition.yCoordinate&&i==currentPosition.xCoordinate)?status:null"
+            ></app-square>
         </div>
     </div>
 </div>
