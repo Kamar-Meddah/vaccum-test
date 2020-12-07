@@ -14,8 +14,6 @@ export class SquareComponent implements OnInit {
 
   constructor(private activatedRoute:ActivatedRoute) { }
 
-  ngOnInit() {
-    this.activatedRoute.queryParams.subscribe(console.log)
-  }
+  ngOnInit() {}
 
 }

@@ -28,7 +28,6 @@ export class HomeComponent implements OnInit {
     public onSubmit(): void {
 
         const values = this.formData.value;
-        console.log(values)
         if (this.formData.valid) {
             this.router.navigateByUrl(
                 `/board?size=${values.size}&position=${values.position}&status=${values.status}&commands=${values.commands}`

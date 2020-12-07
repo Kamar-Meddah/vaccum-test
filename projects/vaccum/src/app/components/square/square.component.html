@@ -3,11 +3,9 @@
          src="/assets/icons/vacuum-cleaner.svg"
          style="width: 100%;height: 100%"
          alt="vaccum-cicon"
-         [ngClass]="{
-         left:status==='W',
-         right:status==='E',
-        up:status==='N',
-         down:status==='S'
-         }"
+         [class.left]="status==='W'"
+         [class.right]="status==='E'"
+         [class.down]="status==='S'"
+         [class.up]="status==='N'"
     >
 </div>

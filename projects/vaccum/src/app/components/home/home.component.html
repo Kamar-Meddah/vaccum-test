@@ -3,7 +3,7 @@
     <form fxLayout="column" [formGroup]="formData" (ngSubmit)="onSubmit()">
         <mat-form-field color="primary"
                         appearance="outline">
-            <mat-label>Taille du grille (y,x)</mat-label>
+            <mat-label>Taille du grille (X,Y)</mat-label>
             <input formControlName="size"
                    placeholder="5,6"
                    matInput
@@ -14,7 +14,7 @@
         </mat-form-field>
         <mat-form-field color="primary"
                         appearance="outline">
-            <mat-label>Position initial (y,x)</mat-label>
+            <mat-label>Position initial (X,Y)</mat-label>
             <input formControlName="position"
                    placeholder="1,1"
                    matInput
